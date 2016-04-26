@@ -162,7 +162,30 @@ public class Array2Exercises {
 
 	// return true if the array is sorted low to high
 	public static boolean isArraySorted(int[][] a) {
-		return false;
+		int num = 0; 
+		int column = 0;
+		int row = 0;
+		
+		
+		for (int i = 0; i < a.length; i++){
+			if (a[column][i] < a[column][i + 1]){
+				
+			}
+		
+		for (int t = 0; t < a.length; t++){
+			if (a[row][t] < a[row][t + 1]){
+				
+			}
+			else{
+				
+				return false;
+			}
+			
+			
+			}
+		
+		}
+		return true;
 	}
 
 	// return true if array is sorted high to low
