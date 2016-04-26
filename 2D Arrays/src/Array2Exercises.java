@@ -11,12 +11,13 @@ public class Array2Exercises {
 		return sum;
 	}
 
+	// 136
 	// return the average of all the values in the array. Same as Total but
 	// counter
 	public static double getAverage(int[][] a) {
 		int sum = 0;
 		double average;
-		int counter = 0;
+		double counter = 0;
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a[i].length; j++) {
 				sum += a[i][j];
@@ -136,13 +137,13 @@ public class Array2Exercises {
 	public static int getBottomLeftToTopRightDiagonalSum(int[][] a) {
 		int sum = 0;
 		int column = 0;
-		
-		for (int i = (a.length - 1);i >= 0; i--){
-			
+
+		for (int i = (a.length - 1); i >= 0; i--) {
+
 			sum += a[i][column];
 
-			column ++;
-			
+			column++;
+
 		}
 		return sum;
 
@@ -195,17 +196,59 @@ public class Array2Exercises {
 
 	// return true if array is jagged
 	public static boolean isJaggedArray(int[][] a) {
+
+		for (int i = 1; i < a.length; i++) {
+
+			if (a[i].length != a[0].length) {
+
+				return true;
+
+			}
+
+		}
+
 		return false;
+
 	}
 
 	// return true if array is square (n x n)
 	public static boolean isSquareArray(int[][] a) {
-		return false;
+		int rows = a.length;
+		for (int i = 1; i < a.length; i++) {
+
+			if (a[i].length != a[0].length) {
+
+				return false;
+
+			}
+
+		}
+
+		if (rows == a[0].length){
+			
+			return true;
+			
+		}
+		else{
+			
+			return false;
+			
+		}
 	}
 
 	// return true if array is rectangular (n x m)
 	public static boolean isRectangularArray(int[][] a) {
-		return false;
+		for (int i = 1; i < a.length; i++) {
+
+			if (a[i].length != a[0].length) {
+
+				return false;
+
+			}
+
+		}
+
+		return true;
 	}
 
 }
