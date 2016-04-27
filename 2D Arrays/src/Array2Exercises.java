@@ -163,13 +163,63 @@ public class Array2Exercises {
 
 	// return true if the array is sorted low to high
 	public static boolean isArraySorted(int[][] a) {
-		
-	return false;
+
+		for (int i = 0; i < a.length; i++) {
+
+			for (int j = 0; j < a[0].length; j++) {
+
+				if (j < 3) {
+					if (a[i][j] > (a[i][j + 1])) {
+
+						return false;
+
+					}
+				} else if (i < 3 && j == 3) {
+
+					if (a[i][j] > a[i + 1][0]) {
+
+						return false;
+
+					}
+
+				}
+
+			}
+
+		}
+
+		return true;
+
 	}
 
 	// return true if array is sorted high to low
 	public static boolean isArrayReversed(int[][] a) {
-		return false;
+		for (int i = 0; i < a.length; i++) {
+
+			for (int j = 0; j < a[0].length; j++) {
+
+				if (j < 3) {
+					if (a[i][j] < (a[i][j + 1])) {
+
+						return false;
+
+					}
+				} else if (i < 3 && j == 3) {
+
+					if (a[i][j] < a[i + 1][0]) {
+
+						return false;
+
+					}
+
+				}
+
+			}
+
+		}
+
+		return true;
+
 	}
 
 	// return true if array is jagged
@@ -202,15 +252,14 @@ public class Array2Exercises {
 
 		}
 
-		if (rows == a[0].length){
-			
+		if (rows == a[0].length) {
+
 			return true;
-			
-		}
-		else{
-			
+
+		} else {
+
 			return false;
-			
+
 		}
 	}
 
